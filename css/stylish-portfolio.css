@@ -151,6 +151,7 @@ hr.small {
 /* Header */
 
 .header {
+    color: black;
     display: table;
     position: relative;
     width: 100%;
@@ -160,6 +161,13 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+.header-desc {
+    font-size: 18px;
+}
+
+.headshot {
+    background: url(../img/headshot.jpg) no-repeat center center scroll; 
 }
 
 /* About */
