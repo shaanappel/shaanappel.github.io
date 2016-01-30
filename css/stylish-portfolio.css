@@ -170,6 +170,12 @@ hr.small {
     background: url(../img/headshot.jpg) no-repeat center center scroll; 
 }
 
+.header-link {
+    color: white;
+}
+
+
+
 /* About */
 
 .about {
