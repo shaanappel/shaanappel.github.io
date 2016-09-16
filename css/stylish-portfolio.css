@@ -32,9 +32,10 @@ body {
 /* Custom Button Styles */
 
 .btn-dark {
-    border-radius: 0;
+    border-radius: 2px;
     color: #fff;
     background-color: rgba(0,0,0,0.4);
+    margin: 10px;
 }
 
 .btn-dark:hover,
@@ -218,6 +219,10 @@ hr.small {
 
 .img-portfolio {
     margin: 0 auto;
+}
+
+.img-round {
+    border-radius: 65px;
 }
 
 .img-portfolio:hover {
