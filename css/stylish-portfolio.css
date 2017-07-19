@@ -229,6 +229,10 @@ hr.small {
     opacity: 0.5;
 }
 
+.img-headshot {
+    border-radius: 50%;
+}
+
 /* Call to Action */
 
 .call-to-action {
