@@ -28,9 +28,10 @@ var force = d3.layout.force()
   .size([width, height])
   .links(dataLinks);
 
+force.friction(0.7);
 force.linkDistance(0);
 force.linkStrength(function(link) {
-    return 4;
+    return 2;
 });
 
 force.start(); 
@@ -62,7 +63,7 @@ svg.on("mousemove", function() {
 
 function charge(d, i) {
     if (i==0) {
-      return -8000;
+      return -4000;
     } else {
       return 0;
     }
