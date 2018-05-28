@@ -61,14 +61,6 @@ svg.on("mousemove", function() {
     force.resume();
 });
 
-window.setInterval(function(){
-
-  root.px = -1000;
-  root.py = -1000;
-  force.resume();
-
-}, 6000);
-
 function charge(d, i) {
     if (i==0) {
       return -4000;
