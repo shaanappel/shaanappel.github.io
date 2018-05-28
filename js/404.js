@@ -34,11 +34,15 @@ force.linkStrength(function(link) {
     return 2;
 });
 
-force.start(); 
+force.start();
+
+var drag = d3.behavior.drag()
+  .on("drag", dragged); 
 
 var svg = d3.select("#bubbles").append("svg")
   .attr("width", width)
-  .attr("height", height);
+  .attr("height", height)
+  .call(drag);
 
 svg.selectAll("circle")
   .data(nodes)
@@ -53,6 +57,13 @@ force.on("tick", function(e) {
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
 });
+
+
+function dragged() {
+  root.x = d3.event.x;
+  root.y = d3.event.y;
+  force.resume();
+}
 
 svg.on("mousemove", function() {
     var p1 = d3.mouse(this);
