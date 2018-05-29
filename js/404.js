@@ -47,12 +47,15 @@ force.linkStrength(function(link) {
 force.start();
 
 var drag = d3.behavior.drag()
-  .on("drag", dragged); 
+  .on("drag", dragged);
 
-var svg = d3.select("#bubbles").append("svg")
-  .attr("width", width)
-  .attr("height", height)
-  .call(drag);
+var svg = d3.select("#bubbles")
+  .append("svg")
+  	.on("touchstart", touch)
+    .on("touchmove", touch)
+    .attr("width", width)
+    .attr("height", height)
+    .call(drag);
 
 svg.selectAll("circle")
   .data(nodes)
@@ -75,10 +78,16 @@ function dragged() {
   force.resume();
 }
 
+
+function touch() {
+  d3.event.preventDefault();
+} 
+
 svg.on("mousemove", function() {
     var p1 = d3.mouse(this);
     root.px = p1[0];
     root.py = p1[1];
+    console.log(p1)
     force.resume();
 });
 
