@@ -3,7 +3,7 @@ function getNameNodes(name, width, height) {
     var offset = 0;
  
     function addLetter(cc_hex, ix) {
-        scale_fac = 2.0;
+        scale_fac = height / 200;
  
         if (document.alphabet.hasOwnProperty(cc_hex)) {
             var chr_data = document.alphabet[cc_hex].P;

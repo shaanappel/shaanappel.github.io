@@ -1,7 +1,17 @@
 var myName = "404";
 
-var width = 960,
-height = 400;
+var w = window,
+	d = document,
+	e = d.documentElement,
+	g = d.getElementsByTagName('body')[0],
+	x = w.innerWidth || e.clientWidth || g.clientWidth,
+	y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+//960
+//400
+
+var width = Math.min(x - 15, 800),
+height = Math.min(x / 2, 400);
 color = d3.scale.category10();
 
 nodes = getNameNodes(myName, width, height);
