@@ -87,7 +87,6 @@ svg.on("mousemove", function() {
     var p1 = d3.mouse(this);
     root.px = p1[0];
     root.py = p1[1];
-    console.log(p1)
     force.resume();
 });
 
